@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+/* @theme {
+  --color-mint-500: ;
+} */
+
+* {
+  @apply box-border p-0 m-0;
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+html,
+body {
+  @apply h-full;
+}
+
+ul,
+ol,
+li {
+  @apply list-none;
+}
+
+.container {
+  @apply mx-auto w-[1500px] py-2;
+}
