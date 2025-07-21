@@ -2,12 +2,12 @@
 
 @import "tailwindcss";
 
-/* @theme {
-  --color-mint-500: ;
-} */
+@theme {
+  --color-mint-500: #3eb489;
+}
 
 * {
-  @apply box-border p-0 m-0;
+  @apply box-border;
 }
 
 img {
@@ -26,5 +26,5 @@ li {
 }
 
 .container {
-  @apply mx-auto w-[1500px] py-2;
+  @apply mx-auto w-[1500px];
 }

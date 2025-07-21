@@ -4,10 +4,11 @@ import { FiSearch } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import userAvatar from "../../assets/Ellipse.png"; // Replace with your local path
 import { navItems } from "../../data";
+import ToggleSwitch from "../commoncomponent/ToggleSwitch"; // Adjust the import path as necessary
 
 const Header = () => {
   return (
-    <header className="w-full border-b border-gray-400/20 text-sm py-12">
+    <header className="w-full border-b border-gray-400/20 text-sm py-4 ">
       {/* Main navbar */}
       <div className="container flex justify-between items-center">
         {/* Logo */}
@@ -21,7 +22,7 @@ const Header = () => {
         <ul className="hidden lg:flex gap-6 text-sm items-center">
           {navItems.map((items, id) => (
             <li key={id}>
-              <a href={items.url} className="flex items-center gap-1">
+              <a href={items.url} className="text-base flex items-center gap-1">
                 {items.title}
                 {items.dropdown && <IoIosArrowDown />}
               </a>
@@ -31,6 +32,8 @@ const Header = () => {
 
         {/* Right actions */}
         <div className="flex items-center gap-4">
+          <ToggleSwitch className="hidden md:block" />
+
           <div className="hidden md:flex items-center gap-2">
             <FaGlobe className="text-green-600" />
             <span>English</span>

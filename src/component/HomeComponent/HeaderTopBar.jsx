@@ -11,7 +11,7 @@ import { MdCalendarToday } from "react-icons/md";
 
 const HeaderTopBar = () => {
   return (
-    <div className="bg-gray-100 text-gray-600  text-base">
+    <div className="bg-gray-100 text-gray-600 py-2 text-base">
       <div className="container">
         <div className=" flex flex-col md:flex-row justify-between items-center">
           <div className="flex gap-6 items-center flex-wrap justify-between">
