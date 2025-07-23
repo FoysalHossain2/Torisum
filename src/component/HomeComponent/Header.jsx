@@ -1,65 +1,73 @@
-// import airplane from "@/assets/airplane.png"; // Replace with your local path
-import { FaGlobe } from "react-icons/fa";
+import { BsArrowRight } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
-import userAvatar from "../../assets/Ellipse.png"; // Replace with your local path
-import { navItems } from "../../data";
-import ToggleSwitch from "../commoncomponent/ToggleSwitch"; // Adjust the import path as necessary
+import { MdOutlineMenu } from "react-icons/md";
+import HeaderTopBar from "./HeaderTopBar";
 
 const Header = () => {
   return (
-    <header className="w-full border-b border-gray-400/20 text-sm py-4 ">
-      {/* Main navbar */}
-      <div className="container flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <span className="text-2xl font-bold text-gray-800">
-            <span className="text-green-600">T</span>
-          </span>
+    <header className="dark:bg-black bg-white w-full">
+      <div className="w-full container mx-auto px-4 py-2 flex justify-between gap-x-2">
+        {/* Left Logo Section */}
+        <div className="bg-green-300 flex items-center gap-2 px-8">
+          <div className="text-red-600 text-5xl font-bold">🍽️</div>
+          <div>
+            <h1 className="font-extrabold text-lg dark:text-white text-black">
+              FRESHEAT
+            </h1>
+            <p className="text-xs text-gray-500 dark:text-gray-300">
+              RESPONDENT
+            </p>
+          </div>
         </div>
 
-        {/* Navigation links */}
-        <ul className="hidden lg:flex gap-6 text-sm items-center">
-          {navItems.map((items, id) => (
-            <li key={id}>
-              <a href={items.url} className="text-base flex items-center gap-1">
-                {items.title}
-                {items.dropdown && <IoIosArrowDown />}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* Right Side Full Section */}
+        <div className="flex-1">
+          {/* Header Top */}
+          <HeaderTopBar />
 
-        {/* Right actions */}
-        <div className="flex items-center gap-4">
-          <ToggleSwitch className="hidden md:block" />
+          {/* Main Header */}
+          <div className="py-4 dark:bg-[#111111] bg-yellow-200">
+            <div className="flex justify-between items-center">
+              {/* Navigation Links */}
+              <nav className="hidden lg:flex items-center gap-6 font-semibold dark:text-white text-black">
+                {[
+                  "Home",
+                  "About Us",
+                  "Shop",
+                  "Pages",
+                  "Blog",
+                  "Contact Us",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-1 cursor-pointer hover:text-red-600"
+                  >
+                    <span>{item}</span>
+                    <IoIosArrowDown className="text-xs" />
+                  </div>
+                ))}
+              </nav>
 
-          <div className="hidden md:flex items-center gap-2">
-            <FaGlobe className="text-green-600" />
-            <span>English</span>
-            <IoIosArrowDown />
-          </div>
+              {/* Right Side Icons */}
+              <div className="flex items-center gap-4">
+                <FiSearch className="text-xl dark:text-white text-black cursor-pointer" />
 
-          <div className="hidden md:flex items-center gap-2">
-            <span>USD</span>
-            <IoIosArrowDown />
-          </div>
+                <div className="relative">
+                  <HiOutlineShoppingCart className="text-2xl dark:text-white text-black cursor-pointer" />
+                  <span className="absolute -top-2 -right-2 text-xs bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
+                    3
+                  </span>
+                </div>
 
-          <FiSearch className="text-lg cursor-pointer" />
+                <button className="bg-[#E60028] text-white px-4 py-2 flex items-center gap-2 font-semibold">
+                  ORDER NOW <BsArrowRight />
+                </button>
 
-          <img
-            src={userAvatar}
-            alt="User Avatar"
-            className="w-8 h-8 rounded-full object-cover"
-          />
-        </div>
-
-        {/* Mobile Menu Icon */}
-        <div className="lg:hidden ml-4">
-          <div className="w-10 h-10 bg-green-600 rounded-md grid grid-cols-3 gap-1 p-2">
-            {[...Array(9)].map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 bg-white rounded-full"></div>
-            ))}
+                <MdOutlineMenu className="text-2xl lg:hidden dark:text-white text-black cursor-pointer" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
