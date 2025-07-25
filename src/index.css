@@ -31,14 +31,31 @@ li {
 
 .header-top-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 10px 50px;
   /* background-image: url(../src/assets/headerTopBg.png); */
   background-color: #e60028;
   background-repeat: no-repeat;
   background-position: center;
+  clip-path: polygon(
+    1110px 0px,
+    100% 0px,
+    100% 50px,
+    100% calc(100% - 49px),
+    100% 100%,
+    199px 100%,
+    27px 100%,
+    38px 0px
+  );
+}
+
+.header-navbar-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* এইটা দিলে vertically center হয় */
+  padding: 10px 50px;
+  background-color: #000;
+  color: #fff;
   clip-path: polygon(
     1110px 0px,
     100% 0px,

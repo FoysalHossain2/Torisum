@@ -28,18 +28,11 @@ const Header = () => {
           <HeaderTopBar />
 
           {/* Main Header */}
-          <div className="py-4 dark:bg-[#111111] bg-yellow-200">
-            <div className="flex justify-between items-center">
-              {/* Navigation Links */}
-              <nav className="hidden lg:flex items-center gap-6 font-semibold dark:text-white text-black">
-                {[
-                  "Home",
-                  "About Us",
-                  "Shop",
-                  "Pages",
-                  "Blog",
-                  "Contact Us",
-                ].map((item) => (
+          <div className="py-4 dark:bg-[#111111] bg-black text-white header-navbar-wrapper">
+            {/* Navigation Links */}
+            <nav className="hidden lg:flex items-center gap-6 font-semibold dark:text-white">
+              {["Home", "About Us", "Shop", "Pages", "Blog", "Contact Us"].map(
+                (item) => (
                   <div
                     key={item}
                     className="flex items-center gap-1 cursor-pointer hover:text-red-600"
@@ -47,26 +40,26 @@ const Header = () => {
                     <span>{item}</span>
                     <IoIosArrowDown className="text-xs" />
                   </div>
-                ))}
-              </nav>
+                )
+              )}
+            </nav>
 
-              {/* Right Side Icons */}
-              <div className="flex items-center gap-4">
-                <FiSearch className="text-xl dark:text-white text-black cursor-pointer" />
+            {/* Right Side Icons */}
+            <div className="flex items-center gap-4">
+              <FiSearch className="text-xl dark:text-white cursor-pointer" />
 
-                <div className="relative">
-                  <HiOutlineShoppingCart className="text-2xl dark:text-white text-black cursor-pointer" />
-                  <span className="absolute -top-2 -right-2 text-xs bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
-                    3
-                  </span>
-                </div>
-
-                <button className="bg-[#E60028] text-white px-4 py-2 flex items-center gap-2 font-semibold">
-                  ORDER NOW <BsArrowRight />
-                </button>
-
-                <MdOutlineMenu className="text-2xl lg:hidden dark:text-white text-black cursor-pointer" />
+              <div className="relative">
+                <HiOutlineShoppingCart className="text-2xl dark:text-white cursor-pointer" />
+                <span className="absolute -top-2 -right-2 text-xs bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
+                  3
+                </span>
               </div>
+
+              <button className="bg-[#E60028] text-white px-4 py-2 flex items-center gap-2 font-semibold">
+                ORDER NOW <BsArrowRight />
+              </button>
+
+              <MdOutlineMenu className="text-2xl lg:hidden dark:text-white cursor-pointer" />
             </div>
           </div>
         </div>
