@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @import "tailwindcss";
 
 @theme {
   --color-mint-500: #3eb489;
+  --Figtree: "Figtree", sans-serif;
+  --Hanken-Grotesk: "Hanken Grotesk", sans-serif;
+  --Lato: "Lato", sans-serif;
 }
 
 * {
@@ -14,11 +17,6 @@ img {
   @apply max-w-full h-auto;
 }
 
-html,
-body {
-  @apply h-full;
-}
-
 ul,
 ol,
 li {
@@ -26,14 +24,14 @@ li {
 }
 
 .container {
-  @apply mx-auto max-w-[1600px];
+  @apply mx-auto max-w-[1500px];
 }
 
 .header-top-wrapper {
+  margin-right: -78px;
   position: relative;
-  padding: 10px 50px;
+  padding: 12px 50px;
   /* background-image: url(../src/assets/headerTopBg.png); */
-  background-color: #e60028;
   background-repeat: no-repeat;
   background-position: center;
   clip-path: polygon(
@@ -43,27 +41,32 @@ li {
     100% calc(100% - 49px),
     100% 100%,
     199px 100%,
-    27px 100%,
+    28px 100%,
     38px 0px
   );
 }
 
 .header-navbar-wrapper {
+  margin-right: -78px;
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* এইটা দিলে vertically center হয় */
-  padding: 10px 50px;
+  align-items: center;
+  padding: 25px 50px;
   background-color: #000;
   color: #fff;
   clip-path: polygon(
     1110px 0px,
     100% 0px,
     100% 50px,
-    100% calc(100% - 49px),
+    100% calc(100% - 39px),
     100% 100%,
     199px 100%,
-    27px 100%,
+    18px 100%,
     38px 0px
   );
+}
+
+.banner-bgImge {
+  background: url(../src/assets/bannerBG1_1.jpg) no-repeat center center;
 }

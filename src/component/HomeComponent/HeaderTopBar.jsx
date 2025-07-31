@@ -8,15 +8,15 @@ import {
 
 const HeaderTopBar = () => {
   return (
-    <div className=" py-  text-white text-sm header-top-wrapper">
+    <div className=" py- bg-red-500  text-white text-sm header-top-wrapper ml-2.5 ">
       {/* Top Bar */}
-      <div className="   py-4  text-white text-sm flex justify-between items-center">
+      <div className=" text-white text-sm flex justify-between items-center">
         <div className="flex items-center gap-2">
           <FaClock />
-          <span>09:00 am - 06:00 pm</span>
+          <span className="font-Lato text-base">09:00 am - 06:00 pm</span>
         </div>
         <div className="flex items-center gap-3">
-          <span>Follow Us:</span>
+          <span className="font-Lato text-base">Follow Us:</span>
           <FaFacebookF />
           <FaTwitter />
           <FaYoutube />
