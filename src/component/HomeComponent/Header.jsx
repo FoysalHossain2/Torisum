@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { HiOutlineShoppingCart } from "react-icons/hi";
-import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineMenu } from "react-icons/md";
 import { TfiSearch } from "react-icons/tfi";
 import RightSightBar from "../commoncomponent/RightSightBar";
@@ -72,7 +71,7 @@ const Header = () => {
                     <span className="font-semibold text-[17px] font-Lato ">
                       {item}
                     </span>
-                    <IoIosArrowDown className="text-xs" />
+                    {/* <IoIosArrowDown className="text-xs" /> */}
                   </div>
                 ))}
               </nav>

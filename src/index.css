@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-  --color-mint-500: #3eb489;
-  --Figtree: "Figtree", sans-serif;
-  --Hanken-Grotesk: "Hanken Grotesk", sans-serif;
-  --Lato: "Lato", sans-serif;
+  --color-primaryColor: #000;
+  --color-seconderyColor: #fc791a;
+  --color-backgroundColor: #f4f1ea;
+  --font-Figtree: "Figtree", sans-serif;
+  --font-HankenGrotesk: "Hanken Grotesk", sans-serif;
+  --font-Lato: "Lato", sans-serif;
 }
 
 * {
